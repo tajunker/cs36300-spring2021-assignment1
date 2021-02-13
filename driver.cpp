@@ -2,7 +2,25 @@
 #include <iostream>
 
 
-void print(Array array);
+void print(Array array_) {
+
+	std::cout << 'TESTING ARRAY\n\n';
+
+	std::cout << '[';
+
+	for (int iterator = 0; iterator < array_.size(); iterator++) {
+
+		std::cout << array_[iterator];
+
+		if (iterator < ( array_.size() - 1 ) )
+
+			std::cout << ',';
+
+	}
+
+	std::cout << "] \n";
+
+}
 
 
 int main (int argc, char * argv []) {
@@ -11,28 +29,5 @@ int main (int argc, char * argv []) {
 
  	print(testingArray);
 
- 	return 0;
-
-
-}
-
-
-void print(Array array) {
-
-	std::cout << 'TESTING ARRAY\n\n';
-
-	std::cout << '[';
-
-	for (int iterator = 0; iterator < array.size(); iterator++) {
-
-		std::cout << array[iterator];
-
-		if (iterator < ( array.size() - 1 ) )
-
-			std::cout << ',';
-
-	}
-
-	std::cout << "] \n";
 
 }
